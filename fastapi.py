@@ -1,8 +1,3 @@
-# if you dont use pipenv uncomment the following:
-# from dotenv import load_dotenv
-# load_dotenv()
-
-# Step1: Setup Pydantic Model (Schema Validation)
 from pydantic import BaseModel
 from typing import List
 
@@ -15,7 +10,6 @@ class RequestState(BaseModel):
     allow_search: bool
 
 
-# Step2: Setup AI Agent from FrontEnd Request
 from fastapi import FastAPI
 from ai_agent import get_response_from_ai_agent
 
